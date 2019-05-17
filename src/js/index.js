@@ -1,15 +1,22 @@
 require(['require.config'], () => {
-    require(['url', 'template', 'swiper', 'header', 'footer', 'aside'], (url, template, swiper) => {
+    require(['url', 'template', 'swiper', 'header', 'footer', 'aside'], (url, template, Swiper) => {
         class Index {
             constructor () {
                 this.getType();
                 this.getBot();
                 this.getParts();
                 this.getSegway();
+                this.banner();
             }
             //首页轮播图
             banner() {
                 var mySwiper = new Swiper ('.swiper-container', {
+                    
+                    autoplay: {
+                        delay: 3000,
+                        stopOnLastSlide: false,
+                        disableOnInteraction: true,
+                    },
                     loop: true, // 循环模式选项
                     
                     // 如果需要分页器

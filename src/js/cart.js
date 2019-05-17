@@ -21,6 +21,11 @@ require(['require.config'], () => {
                     $(".empty").removeClass("hide");
                     $(".list-container").addClass("hide");
                 }
+                if(cart.length === 0) {
+                    $(".empty").removeClass("hide");
+                    $(".list-container").addClass("hide");
+                }
+                
             }
 
             render(cart) {
@@ -32,14 +37,15 @@ require(['require.config'], () => {
 
             bindEvents () {
                 let _this = this;
-                let sum = $('.goods-sum'),
-                    price = $('.goods-price');
+                    // price = $('.goods-price');
                 let cart = localStorage.getItem('cart');
                 cart = JSON.parse(cart);
                 //加号绑定事件  
                 $("#cart-container").on("click", '.plus', (e) => {
                     let plusId = e.currentTarget.getAttribute("data-id");
                     let count = Number(e.currentTarget.previousElementSibling.value);
+                    let price = Number(e.currentTarget.parentNode.parentNode.previousElementSibling.innerHTML);
+                    let sum = Number(e.currentTarget.parentNode.parentNode.nextElementSibling.innerHTML);
                     count++; 
                     e.currentTarget.previousElementSibling.value = count;
                     for(let i = 0; i < cart.length; i++){
@@ -49,7 +55,7 @@ require(['require.config'], () => {
                             break;
                         }
                     }
-                    sum.html(price.html() * count);
+                    e.currentTarget.parentNode.parentNode.nextElementSibling.innerHTML = price * count;
                     aside.calcCartNum();
 
                 })
@@ -57,21 +63,22 @@ require(['require.config'], () => {
                 $("#cart-container").on("click", '.minus', (e) => {
                     let minusId = e.currentTarget.getAttribute("data-id");
                     let count = Number(e.currentTarget.nextElementSibling.value);
-                    count--;
-                    e.currentTarget.nextElementSibling.value = count;
-                    if(count>1){
-                        for(let i = 0; i < cart.length; i++){
-                            if(cart[i].id == minusId){
-                                cart[i].num = count;
-                                localStorage.setItem("cart", JSON.stringify(cart));
-                                break;
-                            }
-                           
-                        }   
+                    let price = Number(e.currentTarget.parentNode.parentNode.previousElementSibling.innerHTML);
+                    let sum = Number(e.currentTarget.parentNode.parentNode.nextElementSibling.innerHTML);
+                    if(count > 1){
+                        count--;  
                     }else{
                         count = 1;
                     }
-                    sum.html(price.html() * count);
+                    e.currentTarget.nextElementSibling.value = count;  
+                    for(let i = 0; i < cart.length; i++){
+                        if(cart[i].id == minusId){
+                            cart[i].num = count;
+                            localStorage.setItem("cart", JSON.stringify(cart));
+                            break;
+                        }
+                    }   
+                    e.currentTarget.parentNode.parentNode.nextElementSibling.innerHTML = price * count;
                     aside.calcCartNum();
                 })
                 //删除事件
@@ -138,7 +145,7 @@ require(['require.config'], () => {
                 // console.log(this.allMoney);
           
                 this.moneyContainer.html(this.allMoney);
-             }
+            }
         }
 
         new Cart("#list-container");
