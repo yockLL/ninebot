@@ -1,0 +1,169 @@
+@import "module/base.scss";
+body{
+    background: #fff;
+}
+header{
+    width: 100%;
+    height: 65px;
+    border: 1px solid #e7e7e7;
+    border-radius: 4px;
+    .container{
+        width: 1170px;
+        height: 65px;
+        margin: 0 auto;
+        a{
+            display: block;
+            width: 109px;
+            height: 65px;
+            img{
+                display: block;
+                width: 77px;
+                height: 24px;
+                padding: 20px 15px;
+            }
+        }
+    }
+}
+main{
+    .container{
+        width: 1170px;
+        height: auto;
+        margin: 0 auto;
+        margin-top: 50px;
+        .box{
+            width: 570px;
+            height: 641px;
+            margin: 0 auto;
+            padding-top: 50px;
+            box-sizing: border-box;
+            box-shadow:  0 2px 20px 0 #ccc;
+            .tab-nav{
+                width: 410px;
+                height: 30px;
+                margin: 0 auto;
+                padding-top: 35px;
+                font-size: 22px;
+                line-height: 30px;
+                text-align: center;
+            }
+            form{
+                width: 410px;
+                height: 350px;
+                margin: 0 auto;
+                margin-top: 45px;
+                background:#fff;
+                .form-box{
+                    widows: 410px;
+                    height: 300px;
+                    .form-group{
+                        height: 50px;
+                        width: 100%;
+                        .username,.password{
+                            border: 0;
+                            height: 50px;
+                            width: 100%;
+                            background: #f6f6f6;
+                            font-size: 16px;
+                            line-height: 50px;
+                            text-indent: 1em;
+                        }
+                    
+                    }
+                    .middle{
+                        width: 100%;
+                        height: 40px; 
+                    }
+                    .checkbox{
+                        width: 100%;
+                        height: 50px;
+                        margin-top: 30px;
+                        font-size: 13px;
+                        line-height: 50px;
+                        text-indent: 1em;
+                        color: rgb(131, 128, 128);
+                        span{
+                            position: relative;
+                            top: -2px;
+                            left: 4px;
+                        }
+                    }
+                    .links{
+                        width: 100%;
+                        height: 30px;
+                        margin-top: 25px;
+                        text-align: center;
+                        a{
+                            display: inline-block;
+                            height: 30px;
+                            line-height: 30px;
+                            color: #33b3ef;
+                            font-size: 16px;
+                        }
+                        span{
+                            display: inline-block;
+                            height: 30px;
+                            font-size: 16px;
+                            line-height: 30px;
+                            padding: 0 5px;
+                        }
+                        .forget{
+                            margin-right: 30px;
+                        }
+                    }
+                    button{
+                        width: 328px;
+                        height: 50px;
+                        text-align: center;
+                        font-size: 16px;
+                        line-height: 50px;
+                        color: #fff;
+                        border: 1px solid #33b3ef;
+                        border-radius: 32px;
+                        background: #33b3ef;
+                        padding: 0 41px;
+                        display: block;
+                        margin: 0 auto;
+                        margin-top: 24px;
+                    }
+                    
+                }
+                
+            }
+        }
+        hr{
+            width: 410px;
+            margin: 0 auto;
+            margin-top: 30px;
+            margin-bottom: 25px;
+            border: 1px solid #eee;
+        }
+        .social-login{
+            width: 360px;
+            height: 50px;
+            margin: 0 auto;
+            .qq{
+                float: left;
+                padding: 0 15px;
+                width: 150px;
+                height: 50px;
+                img{
+                    display: block;
+                    width: 50px;
+                    height: 50px;
+                    margin: 0 auto;
+                }
+            }
+            .wechat{
+                float: right;
+                padding: 0 15px;
+                width: 150px;
+                height: 50px;
+                img{display: block;
+                    width: 50px;
+                    height: 50px;
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+}

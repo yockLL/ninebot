@@ -1,0 +1,62 @@
+.head-wrap{
+    width: 100%;
+    height: 55px;
+    background: #fefefe;
+    box-shadow: 0px 5px 5px #ccc;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    .head{
+        width: 1440px;
+        height: 55px;
+        margin: 0 auto;
+        .logo{
+            width: 194px;
+            height: 45px;
+            margin-top: 4px;
+            float: left;
+        }
+        .nav{
+            width: 906px;
+            height: 55px;
+            margin-left: 14px;
+            float: left;
+            li{
+                padding: 0 20px;
+                line-height: 55px;
+                font-size: 16px;
+                float: left;
+                a{
+                    color: #333;
+                }
+            }
+        }
+        .user{
+            height: 55px;
+            float: left;
+            margin-left: 20px;
+            li{
+                line-height: 45px;
+                float: left;
+                padding: 5px;
+                a{
+                    color: #333;
+                    float: left;
+                    font-size: 14px;
+                }
+                .huiyuanpic{
+                    position: relative;
+                    top: 6px;
+                    left: -4px;
+                }
+            }
+           
+        }
+        .hidden{
+            display: none;
+        }
+        
+    }
+    
+}

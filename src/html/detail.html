@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/detail.css">
+    <link rel="stylesheet" href="/libs/font/iconfont.css">
+</head>
+<body>
+    <header id="header-container"></header>
+    <main>
+        <!-- <detail容器> -->
+        <div class="mall_detail w" id="detail-container"></div>
+        <script type="text/html" id="detail">
+            <div class="detail_box" id="box">
+                <div class="smallimg">
+                    <ul>
+                        <li class="current">
+                            <a href="#" data-image="{{data.imgs[0]}}" data-zoom-image="{{data.imgs[0]}}">
+                                <img src="{{data.imgs[0]}}">
+                            </a>
+                        </li>
+                        <li class="current">
+                            <a href="#" data-image="{{data.imgs[1]}}" data-zoom-image="{{data.imgs[1]}}">
+                                <img src="{{data.imgs[1]}}">
+                            </a>
+                        </li>
+                        <li class="current">
+                            <a href="#" data-image="{{data.imgs[2]}}" data-zoom-image="{{data.imgs[2]}}">
+                                <img src="{{data.imgs[2]}}">
+                            </a>
+                        </li>
+                        <li class="current">
+                            <a href="#" data-image="{{data.imgs[3]}}" data-zoom-image="{{data.imgs[3]}}">
+                                <img src="{{data.imgs[3]}}">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bigimg">
+                    <img class="zoom-img" src="{{data.imgs[0]}}" data-zoom-image="{{data.imgs[0]}}"/>
+                </div>
+                <div class="content">
+                    <div class="top_box">
+                        <ul>
+                            <li>
+                                <h2>{{data.title}}</h2>
+                                <h3>{{data.note}}</h3>
+                            </li>
+                            <li>
+                                价格：
+                                <span>￥{{data.price}}  元</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="number">
+                        数量：
+                        <input type="number" placeholder="1" value="1" id="num" min="1" max="">
+                    </div>
+                    <div class="add_cart" id="cart" data-id="{{data.id}}">
+                        <span><img src="/images/car.png"></span>
+                        加入购物车
+                    </div>
+                   <div class="buy_now" id="buy">
+                        立即购买
+                   </div>
+                   <p>满179免运费</p>
+                </div>
+            </div>
+            <div class="mall-title w">产品详情</div>
+            <div class="detail w">
+                <div class="detail_left">
+                    <p>
+                        <img src="{{data.limg}}">
+                    </p>
+                </div>
+                <div class="detail_right">
+                    <h4>视频</h4>
+                    <ul>
+                        <li>
+                            <img src="{{data.images[0]}}">
+                        </li>
+                        <li>
+                            <img src="{{data.images[1]}}">
+                        </li>
+                        <li>
+                            <img src="{{data.images[2]}}">
+                        </li>
+                        <li>
+                            <img src="{{data.images[3]}}">
+                        </li>
+                    </ul>
+                </div>
+             </div>
+        </script>
+    </main>
+    <footer id="footer-container"></footer>
+    <aside id="aside-container"></aside>
+    <script src="/libs/requirejs/require.js" data-main="/js/detail"></script>
+</body>
+</html>

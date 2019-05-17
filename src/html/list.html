@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/list.css">
+    <link rel="stylesheet" href="/libs/font/iconfont.css">
+</head>
+<body>
+    <header id="header-container"></header>
+    <main>
+        <div class="mall_list w">分类：
+            <span><a href="javascript:;">全部</a></span>
+            <span><a href="javascript:;">双轮平衡车</a></span>
+            <span><a href="javascript:;">单轮平衡车</a></span>
+        </div>
+        <!-- <商品列表开始---list容器> -->
+        <div class="list w" id="list-container"></div>
+        <script type="text/html" id="list-mall">
+                {{each list item}}
+                    <li>
+                        <div class="list_img">
+                            <a href="/html/detail.html?id={{item.id}}"><img src="{{item.image}}"></a>
+                        </div>
+                        <h3><a href="/html/detail.html?id={{item.id}}">{{item.title}}</a></h3>
+                        <p>￥{{item.price}}</p>
+                        <a href="/html/detail.html?id={{item.id}}" class="list_btn">
+                            <span>加入购物车</span>
+                        </a> 
+                    </li>
+                {{/each}}
+            </ul>
+        </script>
+    </main>
+    <footer id="footer-container"></footer>
+    <aside id="aside-container"></aside>
+    <script src="/libs/requirejs/require.js" data-main="/js/list"></script>
+</body>
+</html>

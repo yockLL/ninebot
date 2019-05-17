@@ -1,0 +1,267 @@
+@import "module/base.scss";
+@import "module/header.scss";
+@import "module/footer.scss";
+@import "module/aside.scss";
+main{
+    .container{
+        width: 1240px;
+        height: auto;
+        margin: 0 auto;
+        margin-top: 75px; 
+        .cart-box{
+            width: 1240px;
+            height: auto;
+            .box-head{
+                width: 1240px;
+                height: 55px;
+                line-height: 55px; 
+                h3{
+                    font-size: 24px;
+                    color: #333;
+                }
+            }
+            .box-content{
+                width: 1240px;
+                height: auto;
+                overflow: hidden;
+                .empty{
+                    width: 540px;
+                    margin: 0 auto; 
+                    margin-top: 35px;
+                    padding: 50px 0 105px 0;
+                    h3{
+                        width: 280px;
+                        font-size: 30px;
+                        line-height: 36px;
+                        margin-bottom: 20px;
+                        color: #6d6d6d;
+                        font-weight: normal;    
+                    }
+                    a{
+                        display: block;
+                        width: 148px;
+                        height: 38px;
+                        font-size: 14px;
+                        text-align: center;
+                        line-height: 38px;
+                        color: #fff;
+                        background: #ff4a00;
+                    }
+                }
+                .list-container{
+                    width: 1240px;
+                    height: auto;
+                    overflow: hidden;
+                    .cart-head{
+                        width: 1240px;
+                        height: 14px;
+                        line-height: 14px;
+                        padding: 8px 0;
+                        background: #fafafa;
+                        color: #8c8c8c;
+                        font-size: 12px;
+                        float: left;
+                        .t-checkbox{
+                            padding-left: 11px;
+                        }
+                        .goods{
+                            width: 40%;
+                        }
+                        .method{
+                            width: 10%;
+                        }
+                        .price{
+                            width: 10%;
+                        }
+                        .num{
+                            width: 20%;
+                        }
+                        .sun{
+                            width: 10%;
+                        }
+                        .action{
+                            width: 10%;
+                        }
+                    }
+                    .cart-head>div{
+                        float: left;
+                        text-align: center;
+                    }
+                    .cart-list{
+                        width: 1240px;
+                        height: auto;
+                        overflow: hidden;
+                        .cart-item{
+                            width: 1240px;
+                            height: 150px;
+                            padding: 10px 0;
+                            border-bottom: 1px solid #dfdfdf;
+                            overflow: hidden;
+                            position: relative;
+                            .p-checkbox{
+                                position: absolute;
+                                top: 75px;
+                                left: 10px;
+                            }
+                            .goods>div{
+                                float: left;
+                            }
+                            .goods{
+                                width: 1240px;
+                                height: auto;
+                                overflow: hidden;
+                                .goods-img{
+                                    width: 80px;
+                                    height: 80px;
+                                    margin-top: 40px;
+                                    margin-left: 60px;
+                                    a{
+                                        display: block;
+                                        width: 100%;
+                                        height: 100%;
+                                        img{
+                                            width: 100%;
+                                            height: 100%; 
+                                        }
+                                    }
+                                }
+                                .goods-msg{
+                                    width: 246px;
+                                    height: auto;
+                                    margin-top: 62px;
+                                    margin-left: 66px;
+                                    font-size: 16px;
+                                    a{
+                                        color: #333;
+                                    }
+                                    p{
+                                        font-size: 14px;
+                                        color: #8c8c8c;
+                                    }
+                                }
+                                .method{
+                                    width: 124px;
+                                    height: 116px;
+                                    margin-left: 106px;
+                                }
+                                .goods-price{
+                                    height: auto;
+                                    color: #333;
+                                    font-size: 14px;
+                                    line-height: 150px;
+                                    margin-left: 30px;
+                                }
+                                .goods-num{
+                                    width: 150px;
+                                    height: 28px;
+                                    margin-top: 62px;
+                                    margin-left: 100px;
+                                    float: left;
+                                    .quantity-form{
+                                        a{
+                                            width: 28px;
+                                            height: 28px;
+                                            line-height: 28px;
+                                            text-align: center;
+                                            color: #6d6d6d;
+                                            background: #fafafa;
+                                            display: block;
+                                            float: left;
+                                        }
+                                        .itxt{
+                                            width: 76px;
+                                            height: 28px;
+                                            border: none;
+                                            text-align: center;
+                                            border-right: 1px solid #dfdfdf;
+                                            border-left: 1px solid #dfdfdf;
+                                            float: left;
+                                        }
+                                    }
+                                    
+                                }
+                                .goods-sum{
+                                    height: 80px;
+                                    color: #333;
+                                    font-size: 14px;
+                                    line-height: 150px;
+                                    margin-left: 24px;
+                                }
+                                .goods-action{
+                                    height: 80px;
+                                    margin-top: 62px;
+                                    margin-left: 34px;
+                                    font-size: 16px;
+                                    a{
+                                        color: #333;
+                                    }
+                                }
+                            }
+                            
+                        }
+                        
+                    }
+                    .footer-box{
+                        width: 1240px;
+                        height: 150px;
+                        padding: 40px 0;
+                        overflow: hidden;
+                        .total-price{
+                            width: 1240px;
+                            height: auto;
+                            margin-top: 70px;
+                            margin-right: 130px;
+                            text-align: right;
+                            font-size: 14px;
+                            line-height: 45px;
+                            color: #6d6d6d;
+                            margin-bottom: 10px;
+                            float: right;
+                            span{
+                                display: inline-block;
+                                font-size: 24px;
+                                font-weight: bold;
+                                margin-left: 60px;
+                                margin-right: 10px;
+                                color: #ff4a00;
+                            }
+                        }
+                        .payment{
+                            width: 1240px;
+                            height: 45px;
+                            padding: 20px 0;
+                            background: #fafafa;
+                            overflow: hidden;
+                            .shopping{
+                                width: 150px;
+                                height: 40px;
+                                line-height: 40px;
+                                text-align: center;
+                                background: #fff;
+                                color: #333;
+                                border: 1px solid #dfdfdf;
+                                margin: -7px 30px 0 0;
+                                float: right;
+                            }
+                            .checkout{
+                                width: 150px;
+                                height: 40px;
+                                line-height: 40px;
+                                text-align: center;
+                                background: #ff4a00;
+                                border: 1px solid #ff4a00;
+                                color: #fff;
+                                margin: -7px 30px 0 10px;
+                                float: right;
+                            }
+                        }
+                    }
+                }
+                
+            }
+
+
+            
+        }
+    }
+}

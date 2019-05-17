@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/cart.css">
+    <link rel="stylesheet" href="/libs/font/iconfont.css">
+</head>
+<body>
+    <header id="header-container"></header>
+    <main>
+        <div class="container">
+            <div class="cart-box">
+                <div class="box-head">
+                    <h3>我的购物车</h3>
+                </div>
+                <div class="box-content">
+                    <div class="empty hide">
+                        <h3>您的购物车还是空的赶紧行动吧！</h3>
+                        <a href="/index.html">马上去购物</a>
+                    </div>
+                    <div class="list-container" id="list-container">
+                        <div class="cart-head">
+                            <div class="t-checkbox">
+                                <label>
+                                    <input type="checkbox" name="" id="" class="allCheck" id="allCheck"> 全选
+                                </label>
+                            </div>
+                            <div class="goods">商品</div>
+                            <div class="method">属性</div>
+                            <div class="price">单价</div>
+                            <div class="num">数量</div>
+                            <div class="sum">小计</div>
+                            <div class="action">操作</div>
+                        </div>
+
+                        <!-- <商品列表模块> 容器-->
+                        <ul class="cart-list" id="cart-container"></ul>
+                        <script type="text/html" id="cart-template">
+                            {{each cart item}}
+                                <li class="cart-item">
+                                    <div class="p-checkbox">
+                                        <input type="checkbox"  class="checkbox-p"   id="checkbox-p" >
+                                    </div>
+                                    <div class="goods">
+                                        <div class="goods-img">
+                                        <a href="/html/detail.html?id={{item.id}}"><img src="{{item.imgs[0]}}"></a>
+                                        </div>
+                                        <div class="goods-msg">
+                                            <a href="/html/detail.html?id={{item.id}}">{{item.title}}</a>
+                                            <p>{{item.note}}</p>
+                                        </div>
+                                        <div class="method"></div>
+                                        <div class="goods-price">{{item.price}}</div>
+                                        <div class="goods-num">
+                                            <div class="quantity-form">
+                                                <a href="javascript:;" class="minus" data-id="{{item.id}}"><i class="iconfont icon-jiajianchengchu-"></i></a>
+                                                <input type="text" class="itxt" value="{{item.num}}">
+                                                <a href="javascript:;" class="plus" data-id="{{item.id}}"><i class="iconfont icon-jiajianchengchu-1"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="goods-sum">{{item.price*item.num}}</div>
+                                        <div class="goods-action" data-id="{{item.id}}"><a href="javascript:;">删除</a></div>
+                                    </div>
+                                </li> 
+                            {{/each}}   
+                        </script>
+                        <!-- <商品列表模块>结束 -->   
+                        <!-- <购物车底部模块> -->
+                        <div class="footer-box">
+                            <div class="total-price">
+                                商品总计:<span id="moneyContainer"></span>元
+                            </div>
+                            <div class="payment">
+                                <a href="javascript:;" class="checkout" >去结账</a>
+                                <a href="/" class="shopping">继续购物</a>
+                            </div>
+                        </div>  
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer id="footer-container"></footer>
+    <aside id="aside-container"></aside>
+    <script src="/libs/requirejs/require.js" data-main="/js/cart"></script>
+</body>
+</html>

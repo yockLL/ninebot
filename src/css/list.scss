@@ -1,0 +1,92 @@
+@import "module/base.scss";
+@import "module/header.scss";
+@import "module/footer.scss";
+@import "module/aside.scss";
+main{
+    height: auto;
+    background: #eaeced;
+    .mall_list{
+        height: 19px;
+        margin-top: 130px;
+        margin-bottom: 45px;
+        font-size: 14px;
+        span{
+            margin: 0 14px;
+        }
+        a{
+            color: #333;
+        }
+    }
+    .list{
+        overflow: hidden;
+        height: auto;
+        li{
+            width: 276px;
+            height: 370px;
+            text-align: center;
+            float: left;
+            margin-bottom: 20px;
+            background: #fff;
+            .list_img{
+                width: 100%;
+                height: 217px;
+                img{
+                    width: 200px;
+                    height: 200px;;
+                }
+            }
+            h3{
+                font-weight: normal;
+                font-size: 18px;
+                a{
+                    color: #333;
+                }
+            }
+            p{
+                color: #009fd0;
+                margin: 10px 0;
+            }
+            .list_btn{
+                display: block;
+                height: 40px;
+                width: 157px;
+                border-radius: 8px;
+                line-height: 40px;
+                margin: 0 auto;
+                margin-top: 35px;
+                color: #fff;
+                background:  #009fd0 url(/images/car.png) no-repeat 25px 9px;
+                span{
+                    display: inline-block;
+                    margin-left: 22px;
+                    
+                }
+            }
+            
+        }
+        li:nth-child(2){
+            margin: 0 33px;
+        }
+        li:nth-child(3){
+            margin-right: 32px;
+        }
+        li:nth-child(6){
+            margin: 0 33px;
+        }
+        li:nth-child(7){
+            margin-right: 32px;
+        }
+        li:nth-child(10){
+            margin: 0 33px;
+        }
+        li:nth-child(11){
+            margin-right: 32px;
+        }
+        li:nth-child(14){
+            margin: 0 33px;
+        }
+        li:nth-child(15){
+            margin-right: 32px;
+        }
+    }
+}

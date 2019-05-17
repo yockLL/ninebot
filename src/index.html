@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="/libs/swiper/css/swiper.min.css">
+    <link rel="stylesheet" href="/libs/font/iconfont.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <header id="header-container"></header>
+    <main>
+        <div class="banner w">
+            <!-- <ul>
+                <li>
+                    <a href="javascript:;"></a>
+                    <img src="/images/5b596acead49c.jpg">
+                </li>
+                <li>
+                    <a href="javascript:;"></a>
+                    <img src="/images/5b596a49aca3b.jpg">
+                </li>
+                <li>
+                    <a href="javascript:;"></a>
+                    <img src="/images/5b1659f9e9842.jpg">
+                </li>
+                <li>
+                    <a href="javascript:;"></a>
+                    <img src="/images/5b165a8098b86.jpg">
+                </li>
+            </ul> -->
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="javascript:;"><img src="/images/5b596acead49c.jpg"></a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="javascript:;"><img src="/images/5b596a49aca3b.jpg"></a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="javascript:;"><img src="/images/5b1659f9e9842.jpg"></a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="javascript:;"><img src="/images/5b165a8098b86.jpg"></a>  
+                    </div>
+                </div>
+                <!--分页器 -->
+                <div class="swiper-pagination"></div>
+                
+                <!-- 导航按钮 -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+                
+                <!-- 如果需要滚动条 -->
+                <!-- <div class="swiper-scrollbar"></div> -->
+            </div>
+        </div>
+        <div class="mall-title w">推荐产品</div>
+        <!-- <list容器> -->
+        <div class="recommend w" id="list-container"></div>
+        <script type="text/html" id="list-recommend">
+            <ul w>
+                {{each list item}}
+                    <li>
+                        <a href="javascript:;">
+                            <img src="{{item.image}}">
+                            <span>{{item.title}}</span>
+                            <b>{{item.note}}</b>
+                        </a>
+                    </li>
+               {{ /each }}
+            </ul>
+        </script>    
+        <div class="wrap w">
+            <div class="mall-title w more">Ninebot
+                <a href="javascript:;">更多</a>
+            </div>
+        </div>
+        <!-- <list容器> -->
+        <div class="ninebot w" id="bot-container"></div>
+        <script type="text/html" id="list-ninebot">
+            <ul>
+                {{each list item}}
+                <li>
+                    <a href="javascript:;">
+                        <img src="{{item.image}}">
+                        <span>{{item.title}}</span>
+                        <b>{{item.note}}</b>
+                    </a>     
+                </li>
+                {{ /each }}
+            </ul>
+        </script>
+        <div class="wrap w">
+            <div class="mall-title w more">相关配件
+                <a href="javascript:;">更多</a>
+            </div>
+        </div>
+        <!-- <list容器> -->
+        <div class="parts w" id="parts-container"></div>
+        <script type="text/html" id="list-parts">
+            <ul>
+                {{each list item}}
+                    <li>
+                        <a href="javascript:;">
+                            <img src="{{item.image}}">
+                            <span>{{item.title}}</span>
+                            <b>{{item.note}}</b>
+                        </a>      
+                    </li>
+                {{ /each }}
+            </ul>
+        </script>
+        <div class="wrap w">
+            <div class="mall-title w more">Segway
+                <a href="javascript:;">更多</a>      
+            </div>
+        </div>
+        <!-- <list容器> -->
+        <div class="segway w" id="segway-container"></div>
+        <script type="text/html" id="list-segway">
+            <ul>
+                {{each list item}}
+                    <li>
+                        <a href="javascript:;">
+                            <img src="{{item.image}}">
+                            <span>{{item.title}}</span>
+                            <b>{{item.note}}</b>
+                        </a>      
+                    </li>
+                {{/each}}
+            </ul>
+        </script>
+    </main>
+    <footer id="footer-container"></footer>
+    <aside id="aside-container"></aside>
+    <script src="/libs/requirejs/require.js" data-main="/js/index"></script>
+</body>
+</html>
