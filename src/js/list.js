@@ -1,5 +1,5 @@
 require(['require.config'], () => {
-    require(['url','template', 'header', 'footer', 'aside'], (url, template) => {
+    require(['url','template', 'aside','header', 'footer'], (url, template, aside) => {
         class List {
             constructor () {
                 // this.id = Number(location.search.slice(4));
@@ -16,9 +16,9 @@ require(['require.config'], () => {
             }
             //数据渲染商品列表
             renderData (list) {
-                console.log(template);
                 let html = template("list-mall", {list});
                 $("#list-container").html(html);
+                aside.goTop();
             }
             
         }

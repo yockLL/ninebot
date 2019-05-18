@@ -32,6 +32,7 @@ require(['require.config'], () => {
                 $("#cart-container").html(template('cart-template', {cart}));
                 this.check = Array.from($(".p-checkbox"));
                 this.bindEvents();
+                aside.goTop();
                 // console.log(this.check);
             }
 

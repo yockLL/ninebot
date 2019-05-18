@@ -33,10 +33,9 @@ define(['jquery'], $ => {
         },
 
         goTop () {
-            console.log($(".goTop"));
             $(".goTop").click(function(){
-                console.log(11);
-                $(".layer").animate({top: '-500px'}, "normal");
+                let height = 100;
+                $("html,body").animate({'scrollTop':0}, "normal");
               });
               
         },

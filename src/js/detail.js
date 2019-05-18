@@ -26,6 +26,7 @@ require(['require.config'], () => {
             render(data) {
                 $("#detail-container").html(template("detail", {data})); 
                 this.zoom();//渲染结束后，调放大镜方法
+                aside.goTop();
             }
 
             //事件委托完成加购物车,"#detail-container"父级容器，"#cart"事件源-加购物车按钮
