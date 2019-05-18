@@ -46,12 +46,29 @@
                 font-size: 27px;
                 line-height: 53px;
             }
+            .go{
+                display: block;
+                .goTop{
+                    width: 22px;
+                    height: 22px;
+                    margin: 0 auto;
+                    border: 3px solid #00ace9;
+                    border-left: none;
+                    border-bottom: none;
+                    transform: rotate(-45deg);
+                    position: relative;
+                    top: 18px;
+                }
+            }
         
         }
         li:hover{
             a{
                 color: #fff;
                 background: #00ace9; 
+                .goTop{
+                    border-color: #fff;
+                }
             }
         }
     }

@@ -1,5 +1,5 @@
 require(['require.config'], () => {
-    require(['url', 'template', 'swiper', 'header', 'footer', 'aside'], (url, template, Swiper) => {
+    require(['url', 'template', 'swiper',  'aside', 'header', 'footer'], (url, template, Swiper, aside) => {
         class Index {
             constructor () {
                 this.getType();
@@ -48,6 +48,7 @@ require(['require.config'], () => {
             renderType (list) {
                 let html = template("list-recommend", {list});
                 $("#list-container").html(html);
+                aside.goTop();
             }
 
             //获取Ninebot栏数据

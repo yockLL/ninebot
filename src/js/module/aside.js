@@ -3,6 +3,7 @@ define(['jquery'], $ => {
         this.container = $("#aside-container");
         this.load() .then (() => {
             this.calcCartNum(); 
+            this.goTop();
         });
     }
 
@@ -29,7 +30,18 @@ define(['jquery'], $ => {
                 },0);
             }
             $("#total-num").html(num);
-        }
+        },
+
+        goTop () {
+            console.log($(".goTop"));
+            $(".goTop").click(function(){
+                console.log(11);
+                $(".layer").animate({top: '-500px'}, "normal");
+              });
+              
+        },
+        
+
     })
 
     return new Aside();
